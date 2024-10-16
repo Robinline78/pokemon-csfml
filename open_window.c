@@ -41,14 +41,14 @@ int display_window(sfRenderWindow *window, sfTexture *texture,
 
 int main(void)
 {
-    sfVideoMode mode = {800, 600, 32};
+    sfVideoMode mode = {1264, 1080, 32};
     sfRenderWindow *window;
-    sfTexture *texture = sfTexture_createFromFile("assets/background_sea.png", NULL);
+    sfTexture *texture = sfTexture_createFromFile("assets/map.jpg", NULL);
     sfSprite *sprite = sfSprite_create();
     sfEvent event;
 
     sfSprite_setTexture(sprite, texture, sfTrue);
-    window = sfRenderWindow_create(mode, "SFML window", sfResize | sfClose, NULL);
+    window = sfRenderWindow_create(mode, "Pokemon - CSFML", sfResize | sfClose, NULL);
     if (!window)
        return EXIT_FAILURE;
     if (!texture)
